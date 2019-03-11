@@ -1,1 +1,1 @@
-# Sequelized_Burger
+# Burger

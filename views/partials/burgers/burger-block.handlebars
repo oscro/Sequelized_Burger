@@ -1,0 +1,16 @@
+<li class="subtitle">
+    <h1>
+	{{burger_name}}
+    </h1>
+    
+    {{#if devoured}}
+	<button class="change-devoured button is-success" style="margin: 5px;" data-id="{{id}}" data-newdevoured="{{devoured}}" onClick="document.location.reload(true)">
+		<i class="far fa-circle" style="margin-right: 5px;"></i>Devour Me!
+	</button>
+    {{else}}
+    <button class="change-devoured button is-danger" style="margin: 5px;" data-id="{{id}}" data-newdevoured="{{devoured}}" onClick="document.location.reload(true)">
+		<i class="fas fa-circle" style="margin-right: 5px;"></i>Send it back!
+	</button>
+    {{/if}}
+    
+</li>

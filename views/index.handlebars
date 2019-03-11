@@ -1,0 +1,104 @@
+<section class="hero is-medium is-black is-bold">
+    <div class="hero-body">
+        <div class="container level">
+            <figure class="image is-480x480">
+                <img class="is-rounded" id="burgerImg"
+                    src="https://cdn-expertphoto.pressidium.com/wp-content/uploads/2018/08/food-styling-photography-burger.jpg">
+            </figure>
+
+            <h1 class="title">
+                Burgers! Burgers! Burgers!
+            </h1>
+
+        </div>
+    </div>
+</section>
+
+
+
+<div class="level is-centered container">
+
+
+
+    <div class="container box has-text-centered" style="height: 1400px; width: 400px; margin: 85px;">
+        <h2 class="title is-2">Not Devoured</h2>
+
+        <ul>
+            {{#each burger}}
+            {{#unless devoured}}
+
+            {{> burgers/burger-block devoured=true}}
+
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="container box has-text-centered" style="height: 1400px; width: 400px;">
+        <h2 class="title is-2">Devoured</h2>
+
+
+
+        <ul>
+            {{#each burger}}
+            {{#if devoured}}
+
+            {{> burgers/burger-block devoured=false}}
+
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+
+</div> <!-- UPPERMOST LEVEL DIV -->
+
+<div class="container" style="margin-bottom: 200px;">
+    <h1 class="title">Add a Burger</h1>
+    <form class="create-form">
+
+        <div class="field form-group">
+            <label class="label" for="bu">Burger Name:</label>
+            <div class="control">
+                <input class="input is-primary" id="bu" name="name" type="text" placeholder="e.g The Mastadon">
+            </div>
+        </div>
+
+        <!--<div class="form-group">
+        <label for="bu">Burger Name:</label>
+        <input type="text" id="bu" name="name">
+    </div> -->
+
+        <div class="form-group">
+            <label for="dev" class="label subtitle">Is this Burger Devoured?</label>
+            <br>
+            
+            <div class="subtitle">
+            CONSUMED!
+            <input class="subtitle" type="radio" name="devoured" value="1" checked>
+            </div>
+            
+            <div class="subtitle">
+            Not Devoured!
+            <input class="subtitle" type="radio" name="devoured" value="0">
+            </div>
+        </div>
+        <br>
+        <div class="control">
+            <button type="submit" class="button is-dark">Add Burger</button>
+        </div>
+
+    </form>
+
+</div>
+
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Bulma</strong> by <a href="https://jgthms.com">Oscro</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>

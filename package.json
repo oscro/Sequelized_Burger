@@ -1,0 +1,25 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Burger App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscro/Burger.git"
+  },
+  "author": "Oscar O",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscro/Burger/issues"
+  },
+  "homepage": "https://github.com/oscro/Burger#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "sequelize": "^4.43.0"
+  }
+}
